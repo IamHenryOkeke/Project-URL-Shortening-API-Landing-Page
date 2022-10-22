@@ -16,6 +16,7 @@ body{
     padding: 0;
     margin: 10px 0;
     box-sizing: inherit;
+    font-size: 20px;
 }
 
 li,a {
@@ -23,13 +24,18 @@ li,a {
     text-decoration: none;
 }
 
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
 .navbar{
-    padding: 20px 200px;
+    padding: 30px 200px;
     display: flex;
     justify-content: space-between;
     color: var(--color-gray);
     font-weight: 600;
-    font-size: 20px;
 }
 
 .navbar-left, .navbar-left-list > ul, .navbar-right{
@@ -59,6 +65,50 @@ li,a {
     text-align: center;
 }
 
+.hero-section{
+    padding: 0px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#hero-section-left-top > h1{
+    font-size: 90px;
+    line-height: 1.2;
+}
+
+#hero-section-left-top > p{
+    font-size: 25px;
+    line-height: 1.7;
+    color: var(--color-gray);
+    font-weight: 500;
+    margin-top: -40px;
+}
+
+#hero-section-left-btn > button{
+    background-color: var(--color-cyan);
+    border-radius: 30px;
+    border-style: none;
+    box-shadow: rgb(0 0 0 / 20%) 0 3px 5px -1px, rgb(0 0 0 / 14%) 0 6px 10px 0, rgb(0 0 0 / 12%) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: var(--color-white);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 30px;
+    font-weight: 600;
+    justify-content: center;
+    padding: 20px 60px;
+    text-align: center;
+}
+
+.hero-section-right{
+    width: 100%;
+}
+.hero-section-right > img{
+    width: 100%;
+    height: 700px;
+}
 
 
 
