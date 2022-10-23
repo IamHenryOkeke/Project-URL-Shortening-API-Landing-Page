@@ -190,7 +190,7 @@ input{
 #brand, #records, #customizable {
     background-color: var(--color-white);
     border-radius: 20px;
-    padding: 30px 80px 1px;
+    padding: 30px 55px;
 }
 
 #brand > h4, #records > h4, #customizable > h4 {
