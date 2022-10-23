@@ -5,6 +5,7 @@
     --color-dark-violet: hsl(257, 27%, 26%);
     --color-gray: hsl(0, 0%, 75%);
     --color-grayish-violet: hsl(257, 7%, 63%);
+    --color-blue: #25316D;
     --color-dark-blue: hsl(255, 11%, 22%);
     --color-dark-violet: hsl(260, 8%, 14%);
     --color-red: hsl(0, 87%, 67%);
@@ -51,7 +52,7 @@ header{
 
 .navbar-right > button{
     background-color: var(--color-cyan);
-    border-radius: 24px;
+    border-radius: 30px;
     border-style: none;
     box-shadow: rgb(0 0 0 / 20%) 0 3px 5px -1px, rgb(0 0 0 / 14%) 0 6px 10px 0, rgb(0 0 0 / 12%) 0 1px 18px 0;
     box-sizing: border-box;
@@ -71,6 +72,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin-bottom: 150px;
 }
 
 #hero-section-left-top > h1{
@@ -88,7 +90,7 @@ header{
 
 #hero-section-left-btn > button{
     background-color: var(--color-cyan);
-    border-radius: 30px;
+    border-radius: 40px;
     border-style: none;
     box-shadow: rgb(0 0 0 / 20%) 0 3px 5px -1px, rgb(0 0 0 / 14%) 0 6px 10px 0, rgb(0 0 0 / 12%) 0 1px 18px 0;
     box-sizing: border-box;
@@ -109,6 +111,174 @@ header{
     width: 100%;
     height: 700px;
 }
+
+.main-container{
+    background-color: var(--color-gray);
+    padding: 100px 200px;
+}
+
+.input-section{
+    background-color: var(--color-blue);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    border-radius: 20px;
+    transform: translateY(-12rem);
+    /* z-index: 50; */
+}
+
+input{
+    width: 75%;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 25px;
+    padding-left: 30px;
+}
+
+.input-section > button{
+    height: 80px;
+    background-color: var(--color-cyan);
+    border-radius: 20px;
+    border-style: none;
+    box-shadow: rgb(0 0 0 / 20%) 0 3px 5px -1px, rgb(0 0 0 / 14%) 0 6px 10px 0, rgb(0 0 0 / 12%) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: var(--color-white);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 30px;
+    font-weight: 600;
+    justify-content: center;
+    padding: 20px 60px;
+    text-align: center;
+}
+
+.stats{
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: -100px;
+}
+
+.stats > h3, #boost-item > h3{
+    font-size: 60px;
+}
+
+.stats > p{
+    margin-top: -30px;
+    font-size: 30px;
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+.grid-items{
+    margin: 100px 0px 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.grid-items img{
+    background-color: var(--color-blue);
+    padding: 30px;
+    border-radius: 50%;
+    transform: translateY(-7rem);
+    margin-bottom: -100px;
+}
+
+#brand, #records, #customizable {
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 30px 80px 1px;
+}
+
+#brand > h4, #records > h4, #customizable > h4 {
+    font-size: 35px;
+    margin: 5px 0px;
+}
+
+
+#brand > p, #records > p, #customizable > p {
+    font-size: 25px;
+    color: var(--color-gray);
+    font-weight: 600;
+    text-align: left;
+}
+#records{
+    transform: translateY(5rem);
+}
+
+#customizable{
+    transform: translateY(10rem);
+}
+
+.boost{
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+#boost-item > h3{
+    margin-top: -10px;
+}
+
+#boost-item > button{
+    background-color: var(--color-cyan);
+    border-radius: 40px;
+    border-style: none;
+    box-shadow: rgb(0 0 0 / 20%) 0 3px 5px -1px, rgb(0 0 0 / 14%) 0 6px 10px 0, rgb(0 0 0 / 12%) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: var(--color-white);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 30px;
+    font-weight: 600;
+    justify-content: center;
+    padding: 20px 60px;
+    text-align: center;
+}
+
+.footer{
+    background-color: var(--color-dark-violet);
+    color: var(--color-white);
+    padding: 50px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.footer-top{
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    justify-content: center;
+}
+
+.footer-top p{
+    color: var(--color-gray);
+    font-weight: 600;
+}
+
+.media-icons{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.media-icons img{
+    width: 40px;
+    height: 40px;
+}
+
+.attribution{
+    text-align: end;
+}
+
 
 
 
