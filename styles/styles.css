@@ -43,11 +43,11 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
 }
 
 .navbar-left-list > ul{
-    gap: 30px;
+    gap: 80px;
 }
 
 .navbar-right > button{
