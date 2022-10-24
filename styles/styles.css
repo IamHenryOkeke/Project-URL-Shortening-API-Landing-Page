@@ -118,7 +118,8 @@ header{
 }
 
 .input-section{
-    background-color: var(--color-blue);
+    background: url('/Project-URL-Shortening-API-Landing-Page/images/bg-boost-desktop.svg') no-repeat center center/ cover;
+    background-color: var(--color-dark-blue);
     height: 250px;
     display: flex;
     align-items: center;
@@ -214,7 +215,8 @@ input{
 }
 
 .boost{
-    background-color: var(--color-blue);
+    background: url('/Project-URL-Shortening-API-Landing-Page/images/bg-boost-desktop.svg') no-repeat center center/ cover;
+    background-color: var(--color-dark-blue);
     color: var(--color-white);
     display: flex;
     justify-content: center;
