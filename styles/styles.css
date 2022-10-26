@@ -117,17 +117,25 @@ header{
     padding: 100px 200px;
 }
 
-.input-section{
-    background: url('/Project-URL-Shortening-API-Landing-Page/images/bg-boost-desktop.svg') no-repeat center center/ cover;
+.link-api{
+    background: url('/Project-URL-Shortening-API-Landing-Page/images/bg-shorten-desktop.svg') no-repeat center center/ cover;
     background-color: var(--color-dark-blue);
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 100px;
+    min-height: 250px;
+    padding: 10px 100px;
     border-radius: 20px;
     transform: translateY(-12rem);
-    /* z-index: 50; */
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.input-section{
+    background: url('/Project-URL-Shortening-API-Landing-Page/images/bg-shorten-desktop.svg') no-repeat center center/ cover;
+    background-color: var(--color-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
 }
 
 input{
@@ -184,8 +192,10 @@ input{
     background-color: var(--color-blue);
     padding: 30px;
     border-radius: 50%;
-    transform: translateY(-7rem);
+    transform: translateY(-6.5rem);
     margin-bottom: -100px;
+    height: 60px;
+    width: 60px;
 }
 
 #brand, #records, #customizable {
