@@ -25,7 +25,7 @@
       
         <div class="navbar-right">
           <div>Login</div>
-          <button>Sign Up</button>
+          <button id="local">Sign Up</button>
         </div>
       </nav>
     
@@ -51,12 +51,20 @@
         </div>    
       </div>
   </header>
-  <main class="main-container">
-        <form class="input-section" action="" method="get">
-          <input type="text" placeholder="Shorten a link here..." id="url">
-          <button id="shorten-btn" type="submit">Shorten It!</button>
-        </form>
 
+  <main class="main-container">
+
+        <div class="link-api">
+          <div class="input-section">
+            <input type="text" placeholder="Shorten a link here..." id="url">
+            <button id="shorten-btn" type="submit">Shorten It!</button>
+          </div>
+        </div>
+        
+        <div class="user-links">
+            
+        </div>
+        
         <div class="stats">
               <h3>
                   Advanced Statistics
@@ -99,7 +107,9 @@
             </p>
           </div>
         </div>
+
   </main>
+
   <section class="boost">
         <div id="boost-item">
           <h3>
@@ -110,6 +120,7 @@
           </button>
         </div>
   </section>
+
   <footer class="footer">
       <div class="footer-top">
             <div id="footer-logo">
@@ -146,6 +157,7 @@
         Coded by <a href="#">Okeke Nmesomachukwu Henry</a>.
       </div>
   </footer>
+
   <script src="./scripts/index.js"></script>
 </body>
 </html>
