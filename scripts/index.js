@@ -4,7 +4,7 @@ const urlLink = document.getElementById("url");
 
 const testLocal = document.getElementById("local");
 
-const userLinkContainer = document.querySelector(".user-links")
+const userLinkContainer = document.querySelector(".user-links");
 
 submitBtn.addEventListener("click", async function getShortenLink(e){
           if (urlLink.value === ""){
@@ -21,7 +21,14 @@ submitBtn.addEventListener("click", async function getShortenLink(e){
                   const shortenLink = data.result.full_short_link;
                   alert(`Your shortened link: ${shortenLink}`);
                   localStorage.setItem(originalLink, shortenLink);
-                  printUserLinkList()
+                  printUserLinkList();
+                  const copyLinkButtons = Array.from(document.querySelectorAll("#copy-btn"));
+                  copyLinkButtons.map(button => {
+                    button.addEventListener("click", function(e){
+                        const index = copyLinkButtons.indexOf(e.target);
+                        copyPassword(`${index}`);
+                    })
+                   })
               }
               catch(e){
                   console.error(e);
@@ -31,34 +38,54 @@ submitBtn.addEventListener("click", async function getShortenLink(e){
 const printUserLinkList = () => {
     userLinkContainer.replaceChildren();
     for (let i = 0; i < localStorage.length; i++){
-        renderLink(`${localStorage.key(i)}` , `${localStorage.getItem(localStorage.key(i))}`);
-        console.log(`${localStorage.key(i)} ===> ${localStorage.getItem(localStorage.key(i))}`);
+        renderLink(`${localStorage.key(i)}` , `${localStorage.getItem(localStorage.key(i))}`, i);
     }
 }
 
-const copyPassword = () => {
-    let copyText = document.getElementById("password");
-    navigator.clipboard.writeText(copyText.innerText);
-    alert("Copied password: " + copyText.innerText);
+const copyPassword = (index) => {
+    let copyText = document.getElementById(index);
+    navigator.clipboard.writeText(copyText.textContent);
+    alert("Copied link: " + copyText.textContent);
 }
 
-const renderLink = (lLink, sLink) => {
+const renderLink = (lLink, sLink, index) => {
     const longLink = document.createElement("p");
     const shortLink = document.createElement("p");
+    shortLink.setAttribute('id',index);
     const copyBtn = document.createElement("button");
+    copyBtn.setAttribute('id','copy-btn');
 
+    const longLinkDiv = document.createElement("div");
+    longLinkDiv.setAttribute("id", "longLink");
     const shortLinkDiv = document.createElement("div");
+    shortLinkDiv.setAttribute("id", "shortLink");
     const linkDiv = document.createElement("div");
 
     longLink.textContent = lLink;
     shortLink.textContent = sLink;
     copyBtn.textContent = "Copy";
 
-    linkDiv.appendChild(longLink);
+    longLinkDiv.appendChild(longLink)
+    shortLinkDiv.appendChild(shortLink);
+    shortLinkDiv.appendChild(copyBtn);
+
+    linkDiv.appendChild(longLinkDiv);
     linkDiv.appendChild(shortLinkDiv);
 
     userLinkContainer.appendChild(linkDiv);
 }
+
+printUserLinkList();
+
+const copyLinkButtons = Array.from(document.querySelectorAll("#copy-btn"));
+copyLinkButtons.map(button => {
+    button.addEventListener("click", function(e){
+        const index = copyLinkButtons.indexOf(e.target);
+        copyPassword(`${index}`);
+    })
+});
+
+
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
