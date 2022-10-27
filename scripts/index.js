@@ -2,8 +2,6 @@ const submitBtn = document.getElementById("shorten-btn");
 
 const urlLink = document.getElementById("url");
 
-const testLocal = document.getElementById("local");
-
 const userLinkContainer = document.querySelector(".user-links");
 
 submitBtn.addEventListener("click", async function getShortenLink(e){
