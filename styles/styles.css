@@ -117,22 +117,14 @@ header{
     padding: 100px 200px;
 }
 
-.link-api{
-    background: url('/Project-URL-Shortening-API-Landing-Page/images/bg-shorten-desktop.svg') no-repeat center center/ cover;
-    background-color: var(--color-dark-blue);
-    min-height: 250px;
-    padding: 10px 100px;
-    border-radius: 20px;
-    transform: translateY(-12rem);
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    justify-content: center;
-}
 
 .input-section{
     background: url('/Project-URL-Shortening-API-Landing-Page/images/bg-shorten-desktop.svg') no-repeat center center/ cover;
     background-color: var(--color-dark-blue);
+    min-height: 250px;
+    padding: 0px 100px;
+    border-radius: 20px;
+    transform: translateY(-12rem);
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -163,11 +155,55 @@ input{
     text-align: center;
 }
 
+.user-links{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: -140px;
+}
+
+.user-links > div {
+    display: flex;
+    padding: 10px 50px;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    border-radius: 20px;
+}
+
+.user-links > div > #longLink{
+    width: 900px;
+    word-wrap: break-word;
+}
+
+.user-links > div > #shortLink{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: var(--color-cyan);
+}
+
+.user-links button{
+    background-color: var(--color-cyan);
+    border-radius: 15px;
+    border-style: none;
+    box-shadow: rgb(0 0 0 / 20%) 0 3px 5px -1px, rgb(0 0 0 / 14%) 0 6px 10px 0, rgb(0 0 0 / 12%) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: var(--color-white);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+    padding: 20px 50px;
+    text-align: center;
+}
+
 .stats{
     text-align: center;
     width: 50%;
     margin: 0 auto;
-    margin-top: -100px;
 }
 
 .stats > h3, #boost-item > h3{
