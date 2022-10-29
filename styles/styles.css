@@ -447,6 +447,10 @@ button:hover{
         height: 500px;
     }
 
+    #hero-section-left-top p{
+        font-size: 2.5rem;
+    }
+
     .main-container{
         background-color: var(--color-gray);
         padding: 10px 20px;
@@ -555,7 +559,7 @@ button:hover{
     
     
     #brand > p, #records > p, #customizable > p {
-        font-size: 25px;
+        font-size: 2rem;
         text-align: center;
         color: var(--color-gray);
         font-weight: 600;
@@ -573,7 +577,7 @@ button:hover{
     }
     
     .stats > p{
-        font-size: 25px;
+        font-size: 2rem;
     }
 
     .footer-top{
