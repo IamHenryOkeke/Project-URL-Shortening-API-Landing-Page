@@ -385,11 +385,20 @@ button:hover{
 }
 
 @media (max-width: 800px) {
+    header{
+        gap: 0px;
+    }
     .navbar{
         padding: 30px 5px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+    }
+
+    .navbar > .navbar-left{
+        position: absolute;
+        top: 2.5rem;
+        left: 1rem;
     }
 
     .toggle-button {
@@ -399,9 +408,13 @@ button:hover{
     .nav-links{
         display: none;
         flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
+        align-items: center;
+        width: 80vw;
         gap: 0px;
+        background-color: var(--color-dark-blue);
+        border-radius: 20px;
+        margin: 50px;
+        padding: 20px 0px;
     }
 
     .nav-links .nav-links-left, .nav-links-right {
@@ -418,6 +431,164 @@ button:hover{
 
     .nav-links.active {
         display: flex;
+    }
+
+    .hero-section{
+        margin-top: -50px;
+        padding: 10px;
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+        margin-bottom: 150px;
+    }
+
+    .hero-section-right > img{
+        width: 100%;
+        height: 500px;
+    }
+
+    .main-container{
+        background-color: var(--color-gray);
+        padding: 10px 20px;
+    }
+
+    .input-section-container{
+        padding: 20px 40px;
+        border-radius: 20px;
+        transform: translateY(-7rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .input-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    input{
+        width: 100%;
+        height: 80px;
+        border-radius: 10px;
+        font-size: 25px;
+        padding-left: 30px;
+    }
+    
+    .input-section > button{
+        height: 80px;
+        width: 100%;
+    }
+
+    .stats{
+        width: 100%;
+    }
+
+    .user-links{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        font-size: 26px;
+        font-weight: 600;
+        margin-top: -70px;
+    }
+    
+    .user-links > div {
+        flex-direction: column;
+        padding: 10px 50px;
+        justify-content: space-between;
+        background-color: var(--color-white);
+        border-radius: 20px;
+    }
+    
+    .user-links > div > #longLink{
+        text-align: left;
+        width: 500px;
+    }
+    
+    .user-links > div > #shortLink{
+        text-align: left;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        color: var(--color-cyan);
+    }
+    
+    .user-links button{
+        height: 80px;
+        width: 100%;
+    }
+    
+    .grid-items{
+        margin: 100px 0px 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+    }
+    
+    .grid-items img{
+        background-color: var(--color-blue);
+        padding: 30px;
+        border-radius: 50%;
+        transform: translateY(-6.5rem);
+        margin-bottom: -70px;
+        height: 60px;
+        width: 60px;
+    }
+    
+    #brand, #records, #customizable {
+        background-color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        padding: 30px 40px;
+        text-align: center;
+    }
+    
+    #brand > h4, #records > h4, #customizable > h4 {
+        font-size: 35px;
+        margin: 5px 0px;
+    }
+    
+    
+    #brand > p, #records > p, #customizable > p {
+        font-size: 25px;
+        text-align: center;
+        color: var(--color-gray);
+        font-weight: 600;
+    }
+    #records{
+        transform: translateY(0rem);
+    }
+    
+    #customizable{
+        transform: translateY(0rem);
+    }
+
+    .stats > h3, #boost-item > h3{
+        font-size: 45px;
+    }
+    
+    .stats > p{
+        font-size: 25px;
+    }
+
+    .footer-top{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer{
+        padding: 50px 20px;
+    }
+
+    .attribution{
+        text-align: center;
     }
 }
 
