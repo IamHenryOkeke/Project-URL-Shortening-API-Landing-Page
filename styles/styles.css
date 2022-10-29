@@ -368,7 +368,7 @@ button:hover{
 
 .toggle-button {
     position: absolute;
-    top: 2.5rem;
+    top: 2rem;
     right: 1rem;
     display: none;
     flex-direction: column;
@@ -397,7 +397,7 @@ button:hover{
 
     .navbar > .navbar-left{
         position: absolute;
-        top: 2.5rem;
+        top: 2rem;
         left: 1rem;
     }
 
@@ -455,7 +455,7 @@ button:hover{
     .input-section-container{
         padding: 20px 40px;
         border-radius: 20px;
-        transform: translateY(-7rem);
+        transform: translateY(-120px);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -471,10 +471,10 @@ button:hover{
     
     input{
         width: 100%;
-        height: 80px;
+        height: 60px;
         border-radius: 10px;
         font-size: 25px;
-        padding-left: 30px;
+        padding-left: 10px;
     }
     
     .input-section > button{
