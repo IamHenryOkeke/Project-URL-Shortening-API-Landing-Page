@@ -14,18 +14,23 @@
             <div id="logo">
                 <img src="./images/logo.svg" alt="">
             </div>
-            <div class="navbar-left-list">
-              <ul>
-                <li>Features</li>
-                <li>Pricing</li>
-                <li>Resources</li>
-              </ul>
-            </div>
         </div>
-      
-        <div class="navbar-right">
-          <div>Login</div>
-          <button id="local">Sign Up</button>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="nav-links">
+            <ul class="nav-links-left">
+              <li>Features</li>
+              <li>Pricing</li>
+              <li>Resources</li>
+            </ul>
+            
+            <div class = "nav-links-right">
+              <div>Login</div>
+              <button class="btn">Sign Up</button>
+            </div>
         </div>
       </nav>
     
@@ -41,7 +46,7 @@
                 </p>
             </div>
             <div id="hero-section-left-btn">
-                <button>
+                <button class="btn">
                   Get Started
                 </button>
             </div>
@@ -54,9 +59,14 @@
 
   <main class="main-container">
 
-          <div class="input-section">
-            <input type="text" placeholder="Shorten a link here..." id="url">
-            <button id="shorten-btn" type="submit">Shorten It!</button>
+          <div class="input-section-container">
+             <div action="" class="input-section">
+                <input type="text" placeholder="Shorten a link here..." id="url">
+                <button id="shorten-btn" type="submit" class="btn">Shorten It!</button>
+             </div>
+             <p id="empty-error-message">
+
+             </p>
           </div>
         
         <div class="user-links">
@@ -113,7 +123,7 @@
           <h3>
             Boost your links today
           </h3>
-          <button>
+          <button class="btn">
             Get Started
           </button>
         </div>
