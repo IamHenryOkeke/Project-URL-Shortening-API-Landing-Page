@@ -1,3 +1,10 @@
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('nav-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
 const submitBtn = document.getElementById("shorten-btn");
 
 const urlLink = document.getElementById("url");
@@ -5,32 +12,37 @@ const urlLink = document.getElementById("url");
 const userLinkContainer = document.querySelector(".user-links");
 
 submitBtn.addEventListener("click", async function getShortenLink(e){
-          if (urlLink.value === ""){
-              alert("Empty field. Please enter a value.");
-           }
-          else {
-              e.preventDefault();
-              const originalLink = urlLink.value;
-              const apiUrl = `https://api.shrtco.de/v2/shorten?url=${originalLink}`;
-            
-              try{
-                  const response = await fetch(apiUrl);
-                  const data = await response.json();
-                  const shortenLink = data.result.full_short_link;
-                  alert(`Your shortened link: ${shortenLink}`);
-                  localStorage.setItem(originalLink, shortenLink);
-                  printUserLinkList();
-                  const copyLinkButtons = Array.from(document.querySelectorAll("#copy-btn"));
-                  copyLinkButtons.map(button => {
-                    button.addEventListener("click", function(e){
-                        const index = copyLinkButtons.indexOf(e.target);
-                        copyPassword(`${index}`);
+            const para = document.getElementById("empty-error-message")
+            if (urlLink.value === "" || urlLink.value === null){
+                para.textContent = "Please add a link";
+            }
+            else {
+                e.preventDefault();
+                const originalLink = urlLink.value;
+                const apiUrl = `https://api.shrtco.de/v2/shorten?url=${originalLink}`;
+                
+                try{
+                    para.textContent = ""
+                    const response = await fetch(apiUrl);
+                    const data = await response.json();
+                    const shortenLink = data.result.full_short_link;
+                    alert(`Your shortened link: ${shortenLink}`);
+                    localStorage.setItem(originalLink, shortenLink);
+                    printUserLinkList();
+                    const copyLinkButtons = Array.from(document.querySelectorAll("#copy-btn"));
+                    copyLinkButtons.map(button => {
+                        button.addEventListener("click", function(e){
+                            const index = copyLinkButtons.indexOf(e.target);
+                            copyPassword(`${index}`);
+                        })
                     })
-                   })
-              }
-              catch(e){
-                  console.error(e);
-              }
+
+
+                    
+                }
+                catch(e){
+                    console.error(e);
+                }
             }
         });
 const printUserLinkList = () => {
@@ -52,6 +64,7 @@ const renderLink = (lLink, sLink, index) => {
     shortLink.setAttribute('id',index);
     const copyBtn = document.createElement("button");
     copyBtn.setAttribute('id','copy-btn');
+    copyBtn.setAttribute('class','btn');
 
     const longLinkDiv = document.createElement("div");
     longLinkDiv.setAttribute("id", "longLink");
@@ -82,7 +95,6 @@ copyLinkButtons.map(button => {
         copyPassword(`${index}`);
     })
 });
-
 
 
 /* When the user clicks on the button, 
