@@ -59,6 +59,10 @@ header{
     cursor: pointer;
 }
 
+#nav-line{
+    display: none;
+}
+
 .nav-links-right > button{
     background-color: var(--color-cyan);
     border-radius: 30px;
@@ -193,7 +197,12 @@ input{
 
 .user-links > div > #longLink{
     width: 900px;
-    word-wrap: break-word;
+}
+
+.user-links > div > #longLink > p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .user-links > div > #shortLink{
@@ -409,15 +418,21 @@ button:hover{
         display: none;
         flex-direction: column;
         align-items: center;
-        width: 80vw;
+        width: 90vw;
         gap: 0px;
         background-color: var(--color-dark-blue);
         border-radius: 20px;
         margin: 50px;
-        padding: 20px 0px;
+        padding: 50px 0px;
     }
 
-    .nav-links .nav-links-left, .nav-links-right {
+    #nav-line{
+        display: block;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+   .nav-links-left, .nav-links-right {
         width: 100%;
         flex-direction: column;
         gap: 30px;
@@ -426,7 +441,18 @@ button:hover{
     .nav-links-left , .nav-links-right{
         display: flex;
         align-items: center;
-        
+        font-size: 30px;
+        font-size: 1000;
+    }
+
+    .nav-links-right button{
+        width: 80%;
+        font-size: 30px;
+        font-size: 1000;
+    }
+
+    .nav-links-left{
+        margin-top: -10px;
     }
 
     .nav-links.active {
@@ -434,9 +460,8 @@ button:hover{
     }
 
     .hero-section{
-        margin-top: -50px;
         padding: 10px;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 50px;
         text-align: center;
         margin-bottom: 150px;
@@ -453,7 +478,7 @@ button:hover{
 
     .main-container{
         background-color: var(--color-gray);
-        padding: 10px 20px;
+        padding: 10px 30px;
     }
 
     .input-section-container{
@@ -491,25 +516,24 @@ button:hover{
     }
 
     .user-links{
-        display: grid;
-        grid-template-columns: 1fr;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
         gap: 20px;
         font-size: 26px;
-        font-weight: 600;
         margin-top: -70px;
     }
     
     .user-links > div {
         flex-direction: column;
-        padding: 10px 50px;
-        justify-content: space-between;
-        background-color: var(--color-white);
         border-radius: 20px;
+        padding: 10px 30px;
+        padding-bottom: 30px;
     }
     
     .user-links > div > #longLink{
-        text-align: left;
-        width: 500px;
+        width: 100%;
+        margin-bottom: -50px;
     }
     
     .user-links > div > #shortLink{
@@ -517,36 +541,26 @@ button:hover{
         flex-direction: column;
         align-items: center;
         gap: 30px;
-        color: var(--color-cyan);
     }
     
     .user-links button{
         height: 80px;
         width: 100%;
+        margin-top: -40px;
     }
     
     .grid-items{
-        margin: 100px 0px 200px;
         display: flex;
         flex-direction: column;
         gap: 150px;
     }
     
     .grid-items img{
-        background-color: var(--color-blue);
-        padding: 30px;
-        border-radius: 50%;
         transform: translateY(-6.5rem);
         margin-bottom: -70px;
-        height: 60px;
-        width: 60px;
     }
     
     #brand, #records, #customizable {
-        background-color: var(--color-white);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         border-radius: 20px;
         padding: 30px 40px;
         text-align: center;
@@ -561,9 +575,8 @@ button:hover{
     #brand > p, #records > p, #customizable > p {
         font-size: 2rem;
         text-align: center;
-        color: var(--color-gray);
-        font-weight: 600;
     }
+
     #records{
         transform: translateY(0rem);
     }
