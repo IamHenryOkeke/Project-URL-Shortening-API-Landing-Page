@@ -473,7 +473,11 @@ button:hover{
     }
 
     #hero-section-left-top p{
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+    }
+
+    #hero-section-left-top h1{
+        font-size: 4.5rem;
     }
 
     .main-container{
