@@ -533,6 +533,7 @@ button:hover{
         border-radius: 20px;
         padding: 10px 30px;
         padding-bottom: 30px;
+        gap: 20px;
     }
     
     .user-links > div > #longLink{
@@ -548,7 +549,7 @@ button:hover{
     }
     
     .user-links button{
-        height: 80px;
+        height: 70px;
         width: 100%;
         margin-top: -40px;
     }
@@ -568,7 +569,19 @@ button:hover{
         border-radius: 20px;
         padding: 30px 40px;
         text-align: center;
+        position: relative;
     }
+
+    /* #brand:before, #records:before{
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 80px;
+        background: var(--color-cyan);
+        position: absolute;
+        top: 35.8rem;
+        right: 14.85rem;
+      } */
     
     #brand > h4, #records > h4, #customizable > h4 {
         font-size: 35px;

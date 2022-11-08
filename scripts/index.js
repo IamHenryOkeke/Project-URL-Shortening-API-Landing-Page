@@ -35,10 +35,7 @@ submitBtn.addEventListener("click", async function getShortenLink(e){
                             const index = copyLinkButtons.indexOf(e.target);
                             copyPassword(`${index}`);
                         })
-                    })
-
-
-                    
+                    }) 
                 }
                 catch(e){
                     console.error(e);
