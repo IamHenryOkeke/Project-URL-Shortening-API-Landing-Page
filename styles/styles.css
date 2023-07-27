@@ -97,7 +97,7 @@ header{
     line-height: 1.7;
     color: var(--color-gray);
     font-weight: 500;
-    margin-top: -40px;
+    margin-top: -20px;
 }
 
 #hero-section-left-btn > button{
@@ -107,10 +107,10 @@ header{
     box-shadow: rgb(0 0 0 / 20%) 0 3px 5px -1px, rgb(0 0 0 / 14%) 0 6px 10px 0, rgb(0 0 0 / 12%) 0 1px 18px 0;
     box-sizing: border-box;
     color: var(--color-white);
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
     justify-content: center;
-    padding: 20px 60px;
+    padding: 15px 50px;
     text-align: center;
 }
 
@@ -129,16 +129,15 @@ header{
 
 
 .input-section-container{
-    background: url('/Project-URL-Shortening-API-Landing-Page/images/bg-shorten-desktop.svg') no-repeat center center/ cover;
+    background: url('../images/bg-shorten-desktop.svg') no-repeat center center/ cover;
     background-color: var(--color-dark-blue);
-    min-height: 250px;
-    padding: 0px 100px;
+    padding: 50px 100px;
     border-radius: 20px;
     transform: translateY(-12rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .input-section{
@@ -383,7 +382,7 @@ button:hover{
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
-    height: 21px;
+    height: 21px; 
 }
 
 .toggle-button .bar {
@@ -393,7 +392,7 @@ button:hover{
     border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     header{
         gap: 0px;
     }
@@ -424,6 +423,7 @@ button:hover{
         border-radius: 20px;
         margin: 50px;
         padding: 50px 0px;
+        font-size: 20px;
     }
 
     #nav-line{
@@ -435,19 +435,17 @@ button:hover{
    .nav-links-left, .nav-links-right {
         width: 100%;
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
     }
 
     .nav-links-left , .nav-links-right{
         display: flex;
         align-items: center;
-        font-size: 30px;
         font-size: 1000;
     }
 
     .nav-links-right button{
         width: 80%;
-        font-size: 30px;
         font-size: 1000;
     }
 
@@ -456,7 +454,9 @@ button:hover{
     }
 
     .nav-links.active {
-        display: flex;
+        -webkit-transition: all 300ms ease-out;
+        transition: 0.1s ease-in-out;
+        display: flex;  
     }
 
     .hero-section{
@@ -468,17 +468,16 @@ button:hover{
     }
 
     .hero-section-right > img{
-        margin-top: -30px;
         width: 100%;
-        height: 500px;
+        height: 350px;
     }
 
     #hero-section-left-top p{
-        font-size: 1.8rem;
+        font-size: 20px;
     }
 
     #hero-section-left-top h1{
-        font-size: 4.5rem;
+        font-size: 33px;
     }
 
     .main-container{
@@ -487,13 +486,13 @@ button:hover{
     }
 
     .input-section-container{
-        padding: 0px 40px;
+        padding: 30px;
         border-radius: 15px;
-        transform: translateY(-120px);
+        transform: translateY(-60px);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
     }
     
     .input-section{
@@ -506,14 +505,20 @@ button:hover{
     
     input{
         width: 100%;
-        height: 70px;
+        height: 50px;
         border-radius: 10px;
-        font-size: 25px;
+        font-size: 15px;
         padding: 0px 10px;
+    }
+
+    #empty-error-message{
+        font-size: 17px;
+        font-weight: 400;
     }
     
     .input-section > button{
-        height: 70px;
+        height: 50px;
+        font-size: 20px;
         width: 105%;
         border-radius: 10px;
         display: flex;
@@ -529,8 +534,8 @@ button:hover{
         display: flex;
         flex-direction: column;
         gap: 20px;
-        font-size: 26px;
-        margin-top: -70px;
+        font-size: 16px;
+        margin-top: 0px;
     }
     
     .user-links > div {
@@ -552,10 +557,15 @@ button:hover{
         align-items: center;
         gap: 30px;
     }
+
+    .input-section-container{
+        background-image: url("../images/bg-shorten-mobile.svg");
+        background-position: center;
+    }
     
     .user-links button{
-        height: 70px;
         width: 100%;
+        padding: 15px 0px;
         margin-top: -40px;
     }
     
@@ -566,25 +576,26 @@ button:hover{
     }
     
     .grid-items img{
-        transform: translateY(-6.5rem);
+        transform: translateY(-4.5rem);
         margin-bottom: -70px;
+        padding: 20px;
     }
     
     #brand, #records, #customizable {
         border-radius: 20px;
-        padding: 30px 40px;
+        padding: 20px 25px;
         text-align: center;
         position: relative;
     }
     
     #brand > h4, #records > h4, #customizable > h4 {
-        font-size: 35px;
+        font-size: 25px;
         margin: 5px 0px;
     }
     
     
     #brand > p, #records > p, #customizable > p {
-        font-size: 2rem;
+        font-size: 18px;
         text-align: center;
     }
 
@@ -596,12 +607,23 @@ button:hover{
         transform: translateY(0rem);
     }
 
+    .boost{
+        background-image: url("../images/bg-boost-mobile.svg");
+    }
+
+    #boost-item > button{
+        font-size: 20px;
+        font-weight: 600;
+        padding: 15px 60px;
+    }
+
     .stats > h3, #boost-item > h3{
-        font-size: 45px;
+        font-size: 30px;
     }
     
     .stats > p{
-        font-size: 2rem;
+        font-size: 17px;
+        margin-top: -20px;
     }
 
     .footer-top{
@@ -615,8 +637,13 @@ button:hover{
         padding: 50px 20px;
     }
 
+    .footer p{
+        font-size: 17px;
+    }
+
     .attribution{
         text-align: center;
+        font-size: 15px;
     }
 }
 
